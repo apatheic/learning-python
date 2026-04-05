@@ -1,4 +1,4 @@
-#expirience with .sub()
+#experience with .sub()
 import re
 
 agentNamesRegex = re.compile(r'Agent (\w)\w*')
