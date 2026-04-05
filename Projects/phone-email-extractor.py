@@ -16,7 +16,7 @@ emailRegex = re.compile (r"""(
 [a-zA-Z0-9._%+-]+
 @
 [a-zA-Z0-9.-]+
-(\.[azA-Z]{2,4})
+(\.[a-zA-Z]{2,4})
 )""", re.VERBOSE)
 
 #search matches in text from clipboard
@@ -37,3 +37,4 @@ if len(matches) > 0:
     print('\n'.join(matches))
 else:
     print('Phone numbers and Emails not found.')
+
