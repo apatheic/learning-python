@@ -1,4 +1,4 @@
-#expirience with .VERBOSE
+#experience with .VERBOSE
 import re
 
 phoneRegex = re.compile(r"""(
