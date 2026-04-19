@@ -1,4 +1,4 @@
-import shelve, pprint
+import pprint
 
 cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pokka', 'desc': 'floffy'}]
 print(pprint.pformat(cats))
