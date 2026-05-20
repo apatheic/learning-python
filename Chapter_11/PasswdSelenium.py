@@ -1,0 +1,10 @@
+from selenium import webdriver
+
+browser = webdriver.Firefox()
+browser.get('http://gmail.com')
+
+emailElem = browser.find_element_by_id('Email')
+emailElem.send_keys("fictim_address_email@gmail.com")
+passwordElem = browser.find_element_by_id('Passed')
+passwordElem.send_keys('12345')
+passwordElem.submit()
