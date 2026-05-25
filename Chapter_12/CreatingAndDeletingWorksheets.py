@@ -15,3 +15,9 @@ print(wb.sheetnames)
 # Create a "Middle Sheet" in position 2 (between "Sheet" and "Sheet1")
 wb.create_sheet(index=2, title='Middle Sheet')
 print(wb.sheetnames)
+
+#Deleting "Sheet1"
+del wb['Sheet1']
+
+#Deleting "Middle Sheet"
+del wb['Middle Sheet']
