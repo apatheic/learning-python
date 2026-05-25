@@ -1,7 +1,7 @@
 import openpyxl, pprint
 print('Opening workbook...')
 wb = openpyxl.load_workbook('censuspopdata.xlsx')
-sheet = wb.get_sheet_by_name('Population by Census Tract')
+sheet = wb.('Population by Census Tract')
 
 """county_data has this format:
 {'<state abbrev>':
@@ -12,7 +12,7 @@ sheet = wb.get_sheet_by_name('Population by Census Tract')
 }"""
 county_data = {}
 print('Reading rows...')
-for row in range(2, sheet.get_highest_row() + 1):
+for row in range(2, sheet.get_max_row() + 1):
     # Each row in the spreadsheet has data for one census tract.
     state  = sheet['B' + str(row)].value
     county = sheet['C' + str(row)].value
