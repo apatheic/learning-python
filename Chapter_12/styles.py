@@ -9,3 +9,9 @@ sheet['A1'] = 'Hello, World!'
 sheet['A1'].font = italic24Font  
 
 wb.save('styled.xlsx')
+
+#Font styles:
+#name: String: 'Calibri' or 'TimesNewRoman'
+#size: Integer
+#bold: Boolean: poly-fat
+#italic: Boolean: coursive
