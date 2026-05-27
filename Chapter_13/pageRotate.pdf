@@ -1,0 +1,15 @@
+import pypdf
+
+pdfFile = open('Recursion_Chapter1.pdf', 'rb')
+pdfReader = pypdf.PdfReader(pdfFile)
+page = pdfReader.get_page(0)
+#rotate page to 90 degrees
+page.rotate(90)
+#Conclusion: {'/ArtBox': [21, 21, 525, 687], '/BleedBox': [12, 12, 534, 696], '/Contents': IndirectObject(876, 0, 140349920961136), '/CropBox': [0.0, 0.0, 546, 708], '/LastModified': "D:20220228150046-06'00'", '/MediaBox': [0.0, 0.0, 546, 708], '/Parent': IndirectObject(765, 0, 140349920961136), '/PieceInfo': {'/InDesign': {'/DocumentID': 'xmp.did:0398b13c-c231-4216-b0af-6324bfa5da5f', '/LastModified': 'D:20220224043719Z', '/NumberOfPageItemsInPage': 6, '/NumberofPages': 1, '/OriginalDocumentID': 'adobe:docid:indd:1ccbd0af-4089-11dc-9bc1-87e84947b3df', '/PageItemUIDToLocationDataMap': {'/0': [-32768, 0.0, 2, 51, -207, 456, 28.2, 1, 0.0, 0.0, 1, 51.5, -206.5], '/1': [-32768, 1, 2, 51, 38.4, 456, 288, 1, 0.0, 0.0, 1, 317.064, 163.2], '/2': [-32768, 5, 3, 51, 38.4, 456, 288, 1, 0.0, 0.0, 1, 1.53601, -6], '/3': [-32768, 2, 0.0, 87.12, -8.64, 178.128, 82.368, 1, 0.0, 0.0, 1, 9.55202, 43.36], '/4': [-32768, 4, 4, -1017, 39, 1017, 39, 1, 0.0, 0.0, 1, 0.0, 39], '/5': [-32768, 3, 4, 87.12, -8.64, 178.128, 82.368, 0.934128, 0.0, 0.0, 0.934128, 87.12, -8.64]}, '/PageTransformationMatrixList': {'/0': [1, 0.0, 0.0, 1, 0.0, -333]}, '/PageUIDList': {'/0': 356}, '/PageWidthList': {'/0': 504}}}, '/Resources': {'/ColorSpace': {'/CS0': IndirectObject(810, 0, 140349920961136), '/CS1': IndirectObject(811, 0, 140349920961136), '/CS2': IndirectObject(812, 0, 140349920961136), '/CS3': IndirectObject(813, 0, 140349920961136), '/CS4': IndirectObject(814, 0, 140349920961136), '/CS5': IndirectObject(815, 0, 140349920961136)}, '/ExtGState': {'/GS0': IndirectObject(816, 0, 140349920961136), '/GS1': IndirectObject(817, 0, 140349920961136), '/GS2': IndirectObject(877, 0, 140349920961136)}, '/Font': {'/C2_0': IndirectObject(823, 0, 140349920961136), '/T1_0': IndirectObject(825, 0, 140349920961136), '/T1_1': IndirectObject(827, 0, 140349920961136), '/T1_2': IndirectObject(830, 0, 140349920961136), '/T1_3': IndirectObject(833, 0, 140349920961136), '/T1_4': IndirectObject(834, 0, 140349920961136), '/T1_5': IndirectObject(836, 0, 140349920961136), '/TT0': IndirectObject(840, 0, 140349920961136)}, '/ProcSet': ['/PDF', '/Text', '/ImageC', '/ImageI'], '/Properties': {'/MC0': IndirectObject(841, 0, 140349920961136)}, '/XObject': {'/Fm0': IndirectObject(784, 0, 140349920961136), '/Im0': IndirectObject(802, 0, 140349920961136), '/Im1': IndirectObject(803, 0, 140349920961136), '/Im2': IndirectObject(804, 0, 140349920961136), '/Im3': IndirectObject(805, 0, 140349920961136), '/Im4': IndirectObject(806, 0, 140349920961136), '/Im5': IndirectObject(807, 0, 140349920961136), '/Im6': IndirectObject(808, 0, 140349920961136)}}, '/Rotate': 90, '/StructParents': 0, '/TrimBox': [21, 21, 525, 687], '/Type': '/Page'}
+
+pdfWriter = pypdf.PdfWriter()
+pdfWriter.add_page(page)
+resultPdfFile = open('watermart.pdf', 'wb')
+pdfWriter.write(resultPdfFile)
+resultPdfFile.close()     
+pdfFile.close()
