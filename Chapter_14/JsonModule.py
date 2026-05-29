@@ -1,5 +1,7 @@
-stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
-import json
+pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None}
 
-jsonDataAsPythonValue = json.loads(stringOfJsonData)
-print(jsonDataAsPythonValue)
+import json
+print(pythonValue) # A string into python language
+
+stringOfJsonData = json.dumps(pythonValue) #have module    loads()     too
+print(stringOfJsonData) #A string translated into Java Script
