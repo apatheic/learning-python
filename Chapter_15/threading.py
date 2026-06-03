@@ -7,4 +7,7 @@ def takeANap():
 threadObj = threading.Thread(target=takeANap)
 threadObj.start()
 
+threadObj = threading.Thread(target=print, args=['Cats', 'Dogs', 'Frogs'], kwargs={'sep': ' & '})
+threadObj.start()
+
 print('End of the program.')
